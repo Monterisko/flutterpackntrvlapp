@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterpackntrvlapp/view/HomeScreen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: HomeScreen.id,
+    routes: {HomeScreen.id: (context) => HomeScreen()},
+  ));
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Text(
-          'Our app'
-        ),
-      ),
-    );
-  }
-}
-
